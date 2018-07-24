@@ -6348,10 +6348,28 @@ Home sections
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #000;
+  background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+
+.bg-overlay {
+  position: relative;
+  z-index: 2;
+  background-position: center center;
+  background-size: cover;
+}
+
+.bg-overlay::after {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
 }
 
 /* demo typography */
